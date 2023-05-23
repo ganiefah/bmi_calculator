@@ -17,14 +17,18 @@ function calculateBmi() {
   } else {
      bmi = (weight / ((height * height) / 10000)).toFixed(2);
 
-    if (bmi <= 18.5) {
+    if (bmi < 18.5) {
         display.innerHTML =`You are UNDERWEIGHT 😨 : ${bmi}`;
         display.style.color = "red"
-    }else if (bmi >= 25 && bmi <= 29.9) {
+    }else if (bmi >= 18.5 && bmi <= 25) {
         display.innerHTML =`You are NORMAL WEIGHT 🤩: ${bmi}`;
         display.style.color = "green"
-    }else {
+    }else if (bmi >= 25 && bmi <= 29.9) {
         display.innerHTML =`You are OVER WEIGHT 😮: ${bmi}`;
+        display.style.color = "orange"
+    }
+    else{
+        display.innerHTML =`You are OBESE 😬: ${bmi}`;
         display.style.color = "red"
     }
 }}
