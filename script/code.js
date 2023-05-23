@@ -1,11 +1,13 @@
 //making the bmi function
-function calculateBmi(){
+function calculateBmi() {
     let weight = document.getElementById('Weight').value
     let height = document.getElementById('Height').value
-    let bmi = (weight / ((height * height) /10000)).toFixed(2)
-
-
-
+    if (height === "" || isNaN(height)) {
+    display.innerHTML = "Please use valid information";
+  } else if (weight === "" || isNaN(weight)) {
+    display.innerHTML = "Please us valid information";
+  } else {
+     bmi = (weight / ((height * height) / 10000)).toFixed(2);
     document.getElementById('display').innerHTML = `Your BMI is : ${bmi}`
 
     if (bmi <= 24.9) {
@@ -16,7 +18,7 @@ function calculateBmi(){
     }else {
         document.getElementById('message').innerHTML ='You are OVER WEIGHT'
     }
-}
+}}
 
 
 //clear function
