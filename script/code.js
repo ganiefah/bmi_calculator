@@ -4,6 +4,8 @@ function calculateBmi(){
     let height = document.getElementById('Height').value
     let bmi = (weight / ((height * height) /10000)).toFixed(2)
 
+
+
     document.getElementById('display').innerHTML = `Your BMI is : ${bmi}`
 
     if (bmi <= 24.9) {
