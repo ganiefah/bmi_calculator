@@ -38,11 +38,3 @@ function calculateBmi() {
 function clears() {
   window.location.reload() //will clear all data displayed
 }
-clear.addEventListener("click", () => {
-  clears();
-});
-
-
-
-
-
