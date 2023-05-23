@@ -20,7 +20,7 @@ function calculateBmi() {
     if (bmi <= 18.5) {
         display.innerHTML =`You are UNDERWEIGHT 😨 : ${bmi}`;
         display.style.color = "red"
-    }else if (bmi >= 18.5 && bmi <= 29.9) {
+    }else if (bmi >= 25 && bmi <= 29.9) {
         display.innerHTML =`You are NORMAL WEIGHT 🤩: ${bmi}`;
         display.style.color = "green"
     }else {
